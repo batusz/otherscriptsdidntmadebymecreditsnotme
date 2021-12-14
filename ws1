@@ -2,7 +2,7 @@ local config = {
    ["HeaderWidth"] = 250,
    ["AccentColor"] = Color3.new(0.6,0,0)
 }
-local gui = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/main/roblox/walkspeed2"))():Init(config,game.CoreGui)
+local gui = loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/otherscriptsdidntmadebymecreditsnotme/main/ws2"))():Init(config,game.CoreGui)
 
 gui:CreateCategory("DESTROY SCRIPT"):CreateButton("Click For Close Walkspeed Changer",function() gui:CleanUp() end)
 local lpg = gui:CreateCategory("Local Player")
