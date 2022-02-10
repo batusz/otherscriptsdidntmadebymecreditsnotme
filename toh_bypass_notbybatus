@@ -1,5 +1,5 @@
 --[[
-Credits: https://github.com/insanedude59
+orginal creator: https://github.com/insanedude59
 edited by batus
 ]]
 
@@ -30,3 +30,4 @@ end)
     end
     
 game:GetService("Players").LocalPlayer.PlayerScripts.LocalPartScript:Destroy()
+game:GetService("Players").LocalPlayer.PlayerScripts.LocalScript2:Destroy()
