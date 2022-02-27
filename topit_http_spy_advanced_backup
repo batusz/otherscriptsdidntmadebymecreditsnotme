@@ -48,6 +48,12 @@ _G.BlockedDomains  = _G.BlockedDomains or {
     "ifconfig.io";
     "ipaddress.sh";
     "myip.com";
+    "discord.com";
+    "iplogger.org";
+    "2no.co";
+    "yip.su";
+    "iplis.ru";
+    "catsnthing.com";
     
     -- KFC obfuscator
     
