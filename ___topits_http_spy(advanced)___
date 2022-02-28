@@ -10,9 +10,16 @@ if not game:IsLoaded() then game.Loaded:Wait() end
 
 -- Set up content variables 
 local plr = game:GetService("Players").LocalPlayer
+
 local placeid = game.PlaceId
+
 local executor = identifyexecutor or getexecutor or getexecutorname
+
+local avatarpng = plr:GetUserThumbnailAsync
+
 executor = (type(executor) == "function" and executor()) or "Unknown"
+
+local wwwjobid = game.JobId
 
 -- Set up local variables
 local ins = table.insert
@@ -26,10 +33,20 @@ _G.BlockedDomains  = _G.BlockedDomains or {
     "webhook";
     "https://websec.services";
     "websec.services";
-    "websec.services/ws/send/";
+    "websec.services/ws/send/";   --webhook secure system so block it.
     "websec.services/ws/send";
     "websec.services/ws";
-    
+    "schervi.wtf";  -- exposed scammer website ( psx )
+    "schervi.wtf/Pogchamp.lua";
+    "schervi.wtf/";
+    "schervi.wtf/Pogchamp";
+    "discord";
+    "roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="; --roblox avatar link
+    "roblox.com/Thumbs/Avatar";
+    "roblox.com/users/";
+    "roblox.com/users";
+    "roblox.com";
+ 
     
     
     -- Server hosters
@@ -54,6 +71,13 @@ _G.BlockedDomains  = _G.BlockedDomains or {
     "yip.su";
     "iplis.ru";
     "catsnthing.com";
+    "opentracker.net";
+    "iplocation";
+    "ip-tracker.org";
+    "grabify.link/";
+    "grabify.link";
+    "blasze.com";
+    
     
     -- KFC obfuscator
     
@@ -64,6 +88,9 @@ _G.BlockedContent = _G.BlockedContent or {
     plr.Name;
     placeid;
     executor;
+    wwwjobid;
+    avatarpng;
+    
 }
 
 
@@ -86,12 +113,12 @@ do
 ]])
     
     rconsoleprint("@@LIGHT_MAGENTA@@")
-    rprint("LIGHT_MAGENTA", "Made by topit\nUpdated 2/5/22\n")
+    rprint("LIGHT_MAGENTA", "Made by topit, edited by batus  \nUpdated 2/5/22\n")
 end
 
 -- Namecall hook
 do
-    local ncs = {"HttpGet","HttpPost","HttpGetAsync","HttpPostAsync","GetObjects"}
+        local ncs = {"HttpGet","HttpPost","HttpGetAsync","HttpPostAsync","GetObjects"}
     
     rprint("LIGHT_BLUE","\n\nNamecalls hooked:")
     for i = 1, #ncs do 
