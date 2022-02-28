@@ -8,14 +8,21 @@
 
 if not game:IsLoaded() then game.Loaded:Wait() end
 
+
+
+
 -- Set up content variables 
 local plr = game:GetService("Players").LocalPlayer
+
+local thumbType = Enum.ThumbnailType.HeadShot
+local thumbSize = Enum.ThumbnailSize.Size420x420
+local userId = plr.UserId
 
 local placeid = game.PlaceId
 
 local executor = identifyexecutor or getexecutor or getexecutorname
 
-local avatarpng = plr:GetUserThumbnailAsync
+local avatarpng = plr:GetUserThumbnailAsync(userId, thumbType, thumbSize)
 
 executor = (type(executor) == "function" and executor()) or "Unknown"
 
